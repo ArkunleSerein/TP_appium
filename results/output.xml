@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-23T16:51:19.962225" rpa="false" schemaversion="5">
+<suite id="s1" name="TP appium" source="C:\Users\Administrateur\Desktop\TP_appium">
+<suite id="s1-s1" name="Tests" source="C:\Users\Administrateur\Desktop\TP_appium\tests">
+<suite id="s1-s1-s1" name="API demos test" source="C:\Users\Administrateur\Desktop\TP_appium\tests\API_demos_test.robot">
+<test id="s1-s1-s1-t1" name="API Demos Testcase" line="8">
+<kw name="Open Application To API Demos" owner="keyword">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appActivity=${API_DEMOS_APP_ACTIVITY}</arg>
+<arg>appPackage=${API_DEMOS_APP_PACKAGE}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-01-23T16:51:20.181660" elapsed="10.412986"/>
+</kw>
+<doc>Test pour ouvrir l'application API Demos</doc>
+<status status="PASS" start="2025-01-23T16:51:20.181023" elapsed="10.413829"/>
+</kw>
+<kw name="Check API Demos's Logo" owner="keyword">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-01-23T16:51:31.885650" level="INFO">Current page contains element '//android.widget.TextView[@text="API Demos"]'.</msg>
+<msg time="2025-01-23T16:51:31.885859" level="INFO">xpath criteria: //android.widget.TextView[@text="API Demos"]</msg>
+<arg>//android.widget.TextView[@text="API Demos"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-01-23T16:51:30.595647" elapsed="1.290438"/>
+</kw>
+<doc>Vérifier la présence du logo API Demos</doc>
+<status status="PASS" start="2025-01-23T16:51:30.595235" elapsed="1.290976"/>
+</kw>
+<kw name="Open Views" owner="keyword">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-23T16:51:31.887657" level="INFO">Clicking element '//android.widget.TextView[@content-desc="Views"]'.</msg>
+<msg time="2025-01-23T16:51:33.358555" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Views"]</msg>
+<arg>//android.widget.TextView[@content-desc="Views"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-23T16:51:31.886873" elapsed="1.471915"/>
+</kw>
+<doc>Cliquer sur Views dans le menu principal.</doc>
+<status status="PASS" start="2025-01-23T16:51:31.886540" elapsed="1.472375"/>
+</kw>
+<kw name="Open Different Under Sections" owner="keyword">
+<kw name="Click Element If Visible" owner="library">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-23T16:51:33.440204" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Expandable Lists"]</msg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-23T16:51:33.361305" elapsed="0.079105"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-23T16:51:33.440921" level="INFO">Clicking on //android.widget.TextView[@content-desc="Expandable Lists"]</msg>
+<arg>Clicking on ${locator}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-23T16:51:33.440598" elapsed="0.000577"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-23T16:51:33.442207" level="INFO">Clicking element '//android.widget.TextView[@content-desc="Expandable Lists"]'.</msg>
+<msg time="2025-01-23T16:51:34.839674" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Expandable Lists"]</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-23T16:51:33.441311" elapsed="1.398551"/>
+</kw>
+<arg>//android.widget.TextView[@content-desc="Expandable Lists"]</arg>
+<doc>This keyword clicks an element</doc>
+<status status="PASS" start="2025-01-23T16:51:33.360946" elapsed="1.479027"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-01-23T16:51:34.878027" level="INFO">Current page contains element '//android.widget.ListView[@resource-id="android:id/list"]'.</msg>
+<msg time="2025-01-23T16:51:34.878215" level="INFO">xpath criteria: //android.widget.ListView[@resource-id="android:id/list"]</msg>
+<arg>//android.widget.ListView[@resource-id="android:id/list"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-01-23T16:51:34.840088" elapsed="0.038361"/>
+</kw>
+<kw name="Press Keycode" owner="AppiumLibrary">
+<arg>4</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" start="2025-01-23T16:51:34.878603" elapsed="0.052727"/>
+</kw>
+<kw name="Click Element If Visible" owner="library">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-23T16:51:36.026912" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Date Widgets"]</msg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-23T16:51:34.932019" elapsed="1.095097"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-23T16:51:36.027740" level="INFO">Clicking on //android.widget.TextView[@content-desc="Date Widgets"]</msg>
+<arg>Clicking on ${locator}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-23T16:51:36.027285" elapsed="0.000585"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-23T16:51:36.028885" level="INFO">Clicking element '//android.widget.TextView[@content-desc="Date Widgets"]'.</msg>
+<msg time="2025-01-23T16:51:37.440775" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Date Widgets"]</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-23T16:51:36.028000" elapsed="1.412987"/>
+</kw>
+<arg>//android.widget.TextView[@content-desc="Date Widgets"]</arg>
+<doc>This keyword clicks an element</doc>
+<status status="PASS" start="2025-01-23T16:51:34.931576" elapsed="2.509548"/>
+</kw>
+<doc>Cliquer sur Views dans le menu principal.</doc>
+<status status="PASS" start="2025-01-23T16:51:33.359645" elapsed="4.081560"/>
+</kw>
+<doc>Test to open API Demos on an emulator</doc>
+<status status="PASS" start="2025-01-23T16:51:20.179320" elapsed="17.262220"/>
+</test>
+<doc>Importe les libraries et les ressources</doc>
+<status status="PASS" start="2025-01-23T16:51:19.989954" elapsed="17.453382"/>
+</suite>
+<status status="PASS" start="2025-01-23T16:51:19.987041" elapsed="17.457863"/>
+</suite>
+<status status="PASS" start="2025-01-23T16:51:19.965723" elapsed="17.480614"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TP appium" id="s1" pass="1" fail="0" skip="0">TP appium</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">TP appium.Tests</stat>
+<stat name="API demos test" id="s1-s1-s1" pass="1" fail="0" skip="0">TP appium.Tests.API demos test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
